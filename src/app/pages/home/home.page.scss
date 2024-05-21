@@ -1,0 +1,78 @@
+// LOGO
+
+.logo-col {
+  display: grid;
+  place-items: center;
+}
+
+// CATEGORIES
+
+.Category-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.slider-col {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-img {
+  width: 25px;
+}
+
+.slider-label {
+  color: black;
+  font-size: 20px;
+}
+
+.slider-label.selected {
+  color: #ffffff;
+  // font-weight: bold;
+}
+
+.meditation-img {
+  width: 40px;
+}
+
+.heart-icon {
+  font-size: 25px;
+}
+
+.heart-icon.selected {
+  color: #ffffff;
+}
+
+// SESSIONS
+
+.session-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.home-card {
+  background: linear-gradient(to bottom, #06386b, #06315f);
+  width: 100%;
+}
+
+.name-desc {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.desc {
+  color: #c9d2dc;
+}
+
+.not-found {
+  color: #ffffff;
+  margin-top: 15px;
+}

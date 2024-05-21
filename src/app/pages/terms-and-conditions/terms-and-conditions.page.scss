@@ -1,0 +1,38 @@
+// MENU
+ion-toolbar {
+  --background: transparent;
+}
+
+ion-menu-button {
+  --color: #ffffff;
+}
+
+.t-c-row {
+  margin: 50px 25px;
+}
+
+.t-c-img {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 74px;
+  height: 74px;
+}
+
+.t-c-col {
+  margin: 20px 0 40px 0;
+}
+
+.t-c-label {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.text-col {
+  color: #e0e5e9;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}

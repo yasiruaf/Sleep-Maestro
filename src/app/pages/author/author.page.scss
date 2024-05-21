@@ -1,0 +1,40 @@
+.author-row {
+  margin: 0 20px;
+}
+
+.img-col {
+  display: grid;
+  place-items: center;
+  margin-top: 30px;
+}
+
+.author-img {
+  width: 170px;
+}
+
+.author-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.author-title {
+  color: #ffffff;
+}
+
+.a-c-m {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.a-c-m.selected {
+  color: #e08a0b;
+  border-bottom: 3px solid #e08a0b;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.author-desc {
+  color: #ffffff;
+  line-height: 1.4;
+}

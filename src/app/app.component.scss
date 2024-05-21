@@ -1,0 +1,33 @@
+// MENU
+ion-toolbar {
+  --background: transparent;
+}
+
+.menu-logo {
+  margin: 50px 0 40px 0;
+}
+
+hr {
+  border-top: 1px solid #887f7f;
+  margin-bottom: 10px;
+}
+
+// MENU-BAR-CONTENT
+
+ion-item {
+  --background: transparent;
+  --color: #ffffff;
+}
+
+.item-label {
+  margin-left: 20px;
+  color: #dce1e7;
+  line-height: 1.5;
+}
+
+// LOGO
+
+.logo-col {
+  display: grid;
+  place-items: center;
+}

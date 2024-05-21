@@ -1,0 +1,72 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu side="start" contentId="main-content">
+      <ion-content class="ion-padding main">
+        <ion-header class="menu-logo">
+          <ion-toolbar>
+            <ion-row>
+              <ion-col class="logo-col">
+                <img
+                  src="assets/images/logo.png"
+                  alt="Logo"
+                  width="114px"
+                  height="56px"
+                />
+              </ion-col>
+            </ion-row>
+          </ion-toolbar>
+        </ion-header>
+    
+        <hr />
+    
+        <!-- MENU-BAR-CONTENT -->
+        <ion-menu-toggle auto-hide="true">
+        <ion-item class="ion-no-padding" lines="none" routerLink="/">
+          <ion-icon name="bed-outline"></ion-icon>
+          <ion-label class="item-label">
+            Sessions
+            <p>All audio sessions</p>
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle auto-hide="true">
+      <ion-item class="ion-no-padding" lines="none" routerLink="/">
+        <ion-icon name="musical-note-outline"></ion-icon>
+        <ion-label class="item-label">
+          Categories
+          <p>Categories of audio sessions</p>
+        </ion-label>
+      </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle auto-hide="true">
+        <ion-item class="ion-no-padding" lines="none" routerLink="/author">
+          <ion-icon name="id-card-outline"></ion-icon>
+          <ion-label class="item-label">
+            Phil Owens
+            <p>Creator of Sleeping Maestro</p>
+          </ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+        <ion-item class="ion-no-padding" lines="none" routerLink="/terms-and-conditions">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <ion-label class="item-label">
+            T&Cs
+            <p>Terms & Conditions</p>
+          </ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+        <ion-item class="ion-no-padding" lines="none" routerLink="/privacy">
+          <ion-icon name="shield-checkmark-outline"></ion-icon>
+          <ion-label class="item-label">
+            Privacy
+            <p>Privacy Policy</p>
+          </ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true" class="main">
+  <ion-row>
+    <ion-col size="12" class="ion-no-padding image-container">
+      <ion-img [src]="session.img"></ion-img>
+      <ion-icon name="chevron-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <ion-icon name="heart-outline" class="heart-icon"></ion-icon>
+    </ion-col>
+    <ion-col size="12" class="ion-text-center name-col">
+      <ion-label class="name">{{ session.name }}</ion-label>
+    </ion-col>
+    <ion-col size="12" class="ion-text-center title-col">
+      <ion-text class="title">{{ session.title }}</ion-text>
+    </ion-col>
+    <ion-col size="12" class="ion-text-center ion-padding-start ion-padding-end">
+      <ion-text class="desc">{{ session.desc }}</ion-text>
+    </ion-col>
+    <ion-col *ngIf="session.name !== 'Float'" size="12" class="play-col">
+      <ion-icon name="play-forward-circle-outline" class="forward"></ion-icon>
+      <ion-col size="2"></ion-col>
+      <ion-icon name="play-circle-outline" class="play-music"></ion-icon>
+      <ion-col size="2"></ion-col>
+      <ion-icon name="play-back-circle-outline" class="reverse"></ion-icon>
+    </ion-col>
+    <ion-col *ngIf="session.name === 'Float'" size="12" class="play-col">
+      <ion-button id="open-modal" class="price-btn">Unlock Premium</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <!-- MODAL -->
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.65" class="yas">
+    <ng-template>
+      <ion-content class="modal-content">
+        <ion-row class="modal-row">
+          <ion-col size="12" class="ion-text-center">
+            <ion-label class="premium-label">Get Premium Access</ion-label>
+          </ion-col>
+          <ion-col size="12" class="tick-col ion-margin-top ion-margin-bottom">
+            <ion-img class="tick" src="assets/icon/tick.png"></ion-img>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center label-p">
+            <ion-label class="unlock-premium">Unlock Premium
+              <p>Get access to all Sleep Maestro sessions</p>
+            </ion-label>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="price-btn">$5.99 / Month</ion-button>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="price-btn">$54.99 / Year</ion-button>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-margin-top ion-margin-bottom">
+            <ion-text class="primary">Restore Purchase</ion-text>
+          </ion-col>
+          <ion-col size="12" class="desc-color">
+            <ion-text>Subscriptions will automatically renew and your credit card will be charged at the beginning of each period, unless you unsubscribe at least 24 hours before.</ion-text>
+          </ion-col>
+          <ion-col size="12" class="desc-color">
+            <ion-text>By subscribing to this offer, you agree to our <span class="primary" (click)="navigateAndCloseModal('/privacy')">Privacy Policy</span> and <span class="primary" (click)="navigateAndCloseModal('/terms-and-conditions')">Terms and Conditions</span></ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
