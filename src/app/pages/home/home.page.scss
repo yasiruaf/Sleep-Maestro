@@ -23,13 +23,12 @@
 }
 
 .slider-label {
-  color: black;
+  color: #3b638a;
   font-size: 20px;
 }
 
 .slider-label.selected {
   color: #ffffff;
-  // font-weight: bold;
 }
 
 .meditation-img {
@@ -55,6 +54,18 @@
 .home-card {
   background: linear-gradient(to bottom, #06386b, #06315f);
   width: 100%;
+  border-radius: 15px;
+}
+
+.image-col {
+  display: flex;
+  align-items: stretch;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .name-desc {
@@ -76,3 +87,4 @@
   color: #ffffff;
   margin-top: 15px;
 }
+

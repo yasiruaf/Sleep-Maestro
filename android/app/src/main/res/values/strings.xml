@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Sleep-Maestro</string>
+    <string name="title_activity_main">Sleep-Maestro</string>
+    <string name="package_name">io.sleepmaestro.sleepmaestro</string>
+    <string name="custom_url_scheme">io.sleepmaestro.sleepmaestro</string>
+</resources>

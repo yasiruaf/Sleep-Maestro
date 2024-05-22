@@ -1,9 +1,9 @@
-<ion-content [fullscreen]="true" class="main ion-padding">
+<ion-content [fullscreen]="true" class="main">
 
   <!-- MENU -->
   <app-menu></app-menu>
 
-  <ion-row>
+  <ion-row class="ion-padding-start ion-padding-end ion-padding-bottom">
   <!-- LOGO -->
     <ion-col class="logo-col">
       <img src="assets/images/logo.png" alt="Logo" width="114px" height="56px"/>
@@ -74,8 +74,8 @@
       <ng-container *ngIf="selectedCategory === 'induction' || selectedCategory === 'all'">
       <ion-card class="ion-no-margin ion-margin-top home-card" *ngFor="let induction of inductionArray" (click)="openSessionDetails(induction.id)">
         <ion-row>
-          <ion-col size="3" class="ion-no-padding">
-            <ion-img [src]="induction.img"></ion-img>
+          <ion-col size="3" class="ion-no-padding image-col">
+            <ion-img [src]="induction.img" class="card-image"></ion-img>
           </ion-col>
           <ion-col size="8" class="name-desc">
             <ion-row>

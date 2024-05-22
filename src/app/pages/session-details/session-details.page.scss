@@ -46,8 +46,20 @@ ion-img {
   color: #7c8da2;
 }
 
-.play-col {
-  margin-top: 100px;
+.play-btn {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-cal {
+  margin-bottom: 50px;
+}
+
+.play-unlock {
+  margin-bottom: 40px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,19 +67,26 @@ ion-img {
 
 .forward,
 .reverse {
-  color: #ffffff;
-  font-size: 35px;
+  width: 27px;
 }
 
 .play-music {
+  width: 60px;
+}
+
+.duration {
   color: #ffffff;
-  font-size: 80px;
 }
 
 // MODAL
 
+ion-modal {
+  --height: auto;
+  --background: transparent;
+}
+
 .modal-content {
-  --background: linear-gradient(
+  background: linear-gradient(
     to bottom,
     #062f5b,
     #063a6e,
@@ -75,6 +94,13 @@ ion-img {
     #04427b,
     #04427b
   );
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .modal-row {

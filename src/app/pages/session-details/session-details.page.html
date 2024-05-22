@@ -14,22 +14,33 @@
     <ion-col size="12" class="ion-text-center ion-padding-start ion-padding-end">
       <ion-text class="desc">{{ session.desc }}</ion-text>
     </ion-col>
-    <ion-col *ngIf="session.name !== 'Float'" size="12" class="play-col">
-      <ion-icon name="play-forward-circle-outline" class="forward"></ion-icon>
+    <ion-col *ngIf="session.name !== 'Float'" size="12" class="play-btn">
+      <ion-img src="assets/icon/back_play.png" class="forward"></ion-img>
+      <!-- <ion-icon name="play-forward-circle-outline" class="forward"></ion-icon> -->
       <ion-col size="2"></ion-col>
-      <ion-icon name="play-circle-outline" class="play-music"></ion-icon>
+      <ion-img src="assets/icon/Play_Button.png" class="play-music"></ion-img>
+      <!-- <ion-icon name="play-circle-outline" class="play-music"></ion-icon> -->
       <ion-col size="2"></ion-col>
-      <ion-icon name="play-back-circle-outline" class="reverse"></ion-icon>
+      <ion-img src="assets/icon/forward_play.png" class="reverse"></ion-img>
+      <!-- <ion-icon name="play-back-circle-outline" class="reverse"></ion-icon> -->
     </ion-col>
-    <ion-col *ngIf="session.name === 'Float'" size="12" class="play-col">
+    <ion-col size="12" class="play-cal"> 
+    <ion-row>
+      <ion-col size="12" class="ion-text-center duration" *ngIf="session.name === 'Calm'">13:52</ion-col>
+      <ion-col size="12" class="ion-text-center duration" *ngIf="session.name === 'Beach'">20:58</ion-col>
+      <ion-col size="12" class="ion-text-center duration" *ngIf="session.name === 'Inner Peace'">18:53</ion-col>
+    </ion-row>
+  </ion-col>
+    <ion-col *ngIf="session.name === 'Float'" size="12" class="play-unlock">
       <ion-button id="open-modal" class="price-btn">Unlock Premium</ion-button>
     </ion-col>
   </ion-row>
 
   <!-- MODAL -->
-  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.65" class="yas">
+  
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
     <ng-template>
-      <ion-content class="modal-content">
+      <div class="modal-content">
         <ion-row class="modal-row">
           <ion-col size="12" class="ion-text-center">
             <ion-label class="premium-label">Get Premium Access</ion-label>
@@ -58,8 +69,9 @@
             <ion-text>By subscribing to this offer, you agree to our <span class="primary" (click)="navigateAndCloseModal('/privacy')">Privacy Policy</span> and <span class="primary" (click)="navigateAndCloseModal('/terms-and-conditions')">Terms and Conditions</span></ion-text>
           </ion-col>
         </ion-row>
-      </ion-content>
+      </div>
     </ng-template>
   </ion-modal>
 
+ 
 </ion-content>
