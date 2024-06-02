@@ -15,9 +15,8 @@
     <ion-col size="12" class="ion-margin-top">
       <swiper-container
         [modules]="swiperModules"
-        [spaceBetween]="-5" X
         [loop]="true"
-        [slidesPerView]="2.1">
+        [slidesPerView]="1.9">
         <swiper-slide class="ion-margin-end" (click)="selectCategory('induction')">
           <ion-row>
             <ion-col size="12" class="slider-col">
@@ -27,7 +26,7 @@
           </ion-row>
         </swiper-slide>
         <swiper-slide class="ion-margin-end" (click)="selectCategory('soundscape')">
-          <ion-row>
+          <ion-row class="sound-row">
             <ion-col size="12" class="slider-col">
               <ion-img src="assets/icon/soundscape.png" class="slider-img"></ion-img>
               <ion-label [ngClass]="{'selected': selectedCategory === 'soundscape'}" class="slider-label">soundscape</ion-label>
@@ -35,7 +34,7 @@
           </ion-row>
         </swiper-slide>
         <swiper-slide class="ion-margin-end" (click)="selectCategory('mindset')">
-          <ion-row>
+          <ion-row class="rest-row">
             <ion-col size="12" class="slider-col">
               <ion-img src="assets/icon/mindset_reset.png" class="slider-img"></ion-img>
               <ion-label [ngClass]="{'selected': selectedCategory === 'mindset'}" class="slider-label">mindset reset</ion-label>
@@ -43,7 +42,7 @@
           </ion-row>
         </swiper-slide>
         <swiper-slide class="ion-margin-end" (click)="selectCategory('meditation')">
-          <ion-row>
+          <ion-row class="med-row">
             <ion-col size="12" class="slider-col">
               <ion-img src="assets/icon/soundscape_meditation.png" class="meditation-img"></ion-img>
               <ion-label [ngClass]="{'selected': selectedCategory === 'meditation'}" class="slider-label">soundscape meditation</ion-label>
@@ -52,13 +51,13 @@
         </swiper-slide>
         
         <swiper-slide (click)="selectCategory('favourite')">
-          <ion-row>
+          <ion-row class="fav">
             <ion-col size="1">
               <ion-icon name="heart-outline" class="heart-icon" [ngClass]="{'selected': selectedCategory === 'favourite'}"></ion-icon>
             </ion-col>
             <ion-col size="1"></ion-col>
             <ion-col size="10">
-              <ion-label [ngClass]="{'selected': selectedCategory === 'favourite'}" class="slider-label">favourite</ion-label>
+              <ion-label [ngClass]="{'selected': selectedCategory === 'favourite'}" class="slider-label fav-label">favourite</ion-label>
             </ion-col>
           </ion-row>
         </swiper-slide>
